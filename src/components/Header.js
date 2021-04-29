@@ -5,6 +5,7 @@ import PoolIcon from '@material-ui/icons/Pool';
 
 const useStyles = makeStyles(() => ({
   typographyStyles: {
+    fontSize: 20,
     marginRight: 35
   }
 }));

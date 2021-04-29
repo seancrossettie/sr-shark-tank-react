@@ -72,7 +72,7 @@ const students = [
     isDead: false
   },
   {
-    id: '13',
+    id: '30',
     firstName: 'Hunter',
     lastName: 'Juneau',
     isDead: false
@@ -145,18 +145,18 @@ const students = [
   }
 ];
 
-const livingStudents = (studentArray) => {
-  const liveStudents = studentArray.filter((student) => student.isDead === false);
+const livingStudents = () => {
+  const liveStudents = students.filter((student) => student.isDead === false);
   return liveStudents;
 };
 
-const dearlyBeloved = (studentArray) => {
-  const deadStudents = studentArray.filter((student) => student.isDead === true);
+const dearlyBeloved = () => {
+  const deadStudents = students.filter((student) => student.isDead === true);
   return deadStudents;
 };
 
-const followTheLight = (studentArray) => {
-  const eatenStudent = studentArray[Math.floor(Math.random() * (studentArray.length - 1))];
+const followTheLight = () => {
+  const eatenStudent = students[Math.floor(Math.random() * (students.length - 1))];
   eatenStudent.isDead = true;
   return eatenStudent;
 };
