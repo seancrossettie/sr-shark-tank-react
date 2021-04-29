@@ -157,7 +157,7 @@ const dearlyBeloved = (studentArray) => {
 
 const followTheLight = (studentArray) => {
   const eatenStudent = studentArray[Math.floor(Math.random() * (studentArray.length - 1))];
-  console.warn(eatenStudent);
+  eatenStudent.isDead = true;
   return eatenStudent;
 };
 
