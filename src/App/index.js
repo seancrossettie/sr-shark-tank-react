@@ -13,11 +13,13 @@ function App() {
     followTheLight();
   }, []);
 
-  console.warn(liveStudents);
-  console.warn(deadStudents);
-
   return (
-    <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} />
+    <SharkTank
+      liveStudents={liveStudents}
+      setLiveStudents={setLiveStudents}
+      deadStudents={deadStudents}
+      setDeadStudents={setDeadStudents}
+    />
   );
 }
 
