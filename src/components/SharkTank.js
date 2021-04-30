@@ -13,7 +13,10 @@ const SharkTank = ({
 }) => (
     <Grid container direction='column'>
       <Grid item>
-        <Header />
+        <Header
+          liveStudents={liveStudents}
+          setLiveStudents={setLiveStudents}
+        />
       </Grid>
       <Grid item container>
         <Grid item xs={2} />
