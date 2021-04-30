@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SharkTank from '../components/SharkTank';
-import { dearlyBeloved, followTheLight, livingStudents } from '../helpers/data/studentData';
+import { dearlyBeloved, livingStudents } from '../helpers/data/studentData';
 import './App.scss';
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     setLiveStudents(livingStudents());
     setDeadStudents(dearlyBeloved());
-    followTheLight();
   }, []);
 
   return (
