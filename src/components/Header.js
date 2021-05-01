@@ -5,7 +5,7 @@ import {
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import PoolIcon from '@material-ui/icons/Pool';
-import { followTheLight } from '../helpers/data/studentData';
+import { dearlyBeloved, followTheLight, livingStudents } from '../helpers/data/studentData';
 
 const useStyles = makeStyles(() => ({
   typographyStyles: {
@@ -17,9 +17,13 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Header = ({ liveStudents, setLiveStudents }) => {
+const Header = ({
+  liveStudents, setLiveStudents, setDeadStudents
+}) => {
   const handleClick = () => {
-    setLiveStudents(liveStudents.splice(followTheLight()));
+    followTheLight(liveStudents);
+    setLiveStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
   };
 
   const classes = useStyles();
@@ -41,6 +45,7 @@ const Header = ({ liveStudents, setLiveStudents }) => {
 Header.propTypes = {
   liveStudents: PropTypes.array.isRequired,
   setLiveStudents: PropTypes.func,
+  setDeadStudents: PropTypes.func,
 };
 
 export default Header;

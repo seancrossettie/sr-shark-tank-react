@@ -16,6 +16,8 @@ const SharkTank = ({
         <Header
           liveStudents={liveStudents}
           setLiveStudents={setLiveStudents}
+          deadStudents={deadStudents}
+          setDeadStudents={setDeadStudents}
         />
       </Grid>
       <Grid item container>
