@@ -10,10 +10,10 @@ import { dearlyBeloved, followTheLight, livingStudents } from '../helpers/data/s
 const useStyles = makeStyles(() => ({
   typographyStyles: {
     fontSize: 20,
-    marginRight: 35
+    flex: 1,
   },
   buttonStyles: {
-    marginLeft: 100
+    marginLeft: 25,
   }
 }));
 
@@ -32,9 +32,9 @@ const Header = ({
       <Toolbar>
         <Typography className={classes.typographyStyles}>
           Shark Tank
+          <PoolIcon className={classes.buttonStyles}/>
         </Typography>
-      <PoolIcon />
-      <Button variant="contained" color="secondary" className={classes.buttonStyles} onClick={handleClick}>
+      <Button variant="contained" color="secondary" onClick={handleClick}>
         SHARK ATTACK
       </Button>
       </Toolbar>

@@ -18,16 +18,16 @@ const LiveStudents = ({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography gutterBottom variant='h5' component='h2'>
-          {firstName} {lastName}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          I have not yet been devoured!
-        </Typography>
-      </CardContent>
-    </Card>
+      <Card className={classes.root}>
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='h2'>
+            {firstName} {lastName}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            I have not yet been devoured!
+          </Typography>
+        </CardContent>
+      </Card>
   );
 };
 
