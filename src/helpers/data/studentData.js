@@ -155,10 +155,14 @@ const dearlyBeloved = () => {
   return deadStudents;
 };
 
-const followTheLight = () => {
-  const eatenStudent = students[Math.floor(Math.random() * (students.length - 1))];
-  eatenStudent.isDead = true;
-  return eatenStudent;
+const followTheLight = (array) => {
+  const randomArr = array;
+  const index = Math.floor(Math.random() * (randomArr.length));
+  if (randomArr.length > 0 && randomArr[index].isDead === false) {
+    randomArr[index].isDead = true;
+  } else {
+    console.warn('All Students Eaten!');
+  }
 };
 
 export {
