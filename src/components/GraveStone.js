@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
   root: {
-    width: 345,
+    maxWidth: 345,
   },
 });
 
